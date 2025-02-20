@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revacycle - Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="recycling-container">
+        <header class="status-bar">
+            <time class="time">12:45</time>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1915bb755071baa4b4e1765a2bf71e6108de7e96ec3d1a573c8e04f71b965364?placeholderIfAbsent=true&apiKey=e777292487bc4fee993e40c8ed51314b" alt="Status icons" class="status-icons" />
+        </header>
+        
+        <div class="logo-container">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/67d15a9f1f1836b4ce54d3ea3f6c676c3f7a31c2e8622af6d08ac104d63b0f03?placeholderIfAbsent=true&apiKey=e777292487bc4fee993e40c8ed51314b" alt="Recycling Logo" class="logo" />
+        </div>
+        
+        <p class="mission-statement">
+            "Empowering the Reva community to recycle smarter and foster a greener campus, one action at a time."
+        </p>
+        
+        <!-- Interactive Button -->
+        <button id="getStartedButton" class="get-started-button">Get Started</button>
+        
+        <div class="indicator" role="presentation"></div>
+    </section>
+
+    <script>
+        // When "Get Started" button is clicked, redirect to the login page
+        document.getElementById("getStartedButton").addEventListener("click", function() {
+            window.location.href = 'login.html'; // Redirects to login page
+        });
+    </script>
+</body>
+</html>

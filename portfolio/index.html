@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SHINCHAN ANIMATION</title>
+        <style>
+            body {
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-attachment: fixed;
+                font-family: Arial, sans-serif;
+                color: white;
+                text-align: center;
+            }
+
+            .image1 {
+                margin-top: 500px;
+            }
+
+            /* Quiz Styles */
+            .quiz-container {
+                background-color: rgba(0, 0, 0, 0.7);
+                border-radius: 10px;
+                padding: 20px;
+                margin: 20px auto;
+                width: 50%;
+                color: white;
+            }
+
+            .quiz-container h2 {
+                margin-top: 0;
+            }
+
+            .question {
+                margin-bottom: 15px;
+            }
+
+            .quiz-result {
+                font-size: 1.2em;
+                margin-top: 20px;
+            }
+
+            #result-image {
+                width: 100px;
+                margin-top: 10px;
+                animation: fadeIn 1s ease-in-out;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+        </style>
+    </head>
+
+    <body background="home.png">
+        <!-- Japanese heading for Shinchan -->
+        <h1>しんちゃん</h1>
+
+        <!-- Existing Animation -->
+        <marquee scrollamount="20" direction="right">
+            <img class="image1" width="200px" src="cute-dog.gif">
+        </marquee>
+
+        <!-- Quiz Section -->
+        <div class="quiz-container">
+            <h2>Which Shinchan Character Are You?</h2>
+
+            <div class="question">
+                <p>1. What's your favorite activity?</p>
+                <input type="radio" name="q1" value="shinchan"> Playing pranks<br>
+                <input type="radio" name="q1" value="misae"> House chores<br>
+                <input type="radio" name="q1" value="himawari"> Collecting cute things<br>
+                <input type="radio" name="q1" value="hiroshi"> Working hard<br>
+            </div>
+
+            <div class="question">
+                <p>2. What’s your favorite food?</p>
+                <input type="radio" name="q2" value="shinchan"> Chocobi<br>
+                <input type="radio" name="q2" value="misae"> Home-cooked meals<br>
+                <input type="radio" name="q2" value="himawari"> Candy<br>
+                <input type="radio" name="q2" value="hiroshi"> Barbecue<br>
+            </div>
+
+            <div class="question">
+                <p>3. How do you usually handle problems?</p>
+                <input type="radio" name="q3" value="shinchan"> Make jokes about them<br>
+                <input type="radio" name="q3" value="misae"> Handle them responsibly<br>
+                <input type="radio" name="q3" value="himawari"> Ignore them<br>
+                <input type="radio" name="q3" value="hiroshi"> Face them with patience<br>
+            </div>
+
+            <button onclick="calculateResult()">Find Out</button>
+
+            <!-- Result Section -->
+            <div class="quiz-result" id="result" style="display: none;">
+                <p id="result-text"></p>
+                <img id="result-image" src="" alt="Character Image">
+            </div>
+        </div>
+
+        <!-- Link to External JavaScript File -->
+        <script src="quiz.js"></script>
+    </body>
+</html>

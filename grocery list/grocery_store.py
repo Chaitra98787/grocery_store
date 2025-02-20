@@ -1,6 +1,5 @@
 import mysql.connector
 
-# Connect to MySQL
 db = mysql.connector.connect(
     host="localhost",
     user="root",  # Change this
@@ -17,7 +16,6 @@ def add_product(name, price, quantity):
     db.commit()
     print("Product added successfully!")
 
-# Example usage
 add_product("Apples", 50.00, 100)
 def view_products():
     cursor.execute("SELECT * FROM products")
@@ -25,10 +23,8 @@ def view_products():
     for product in products:
         print(product)
 
-# Example usage
 view_products()
 def sell_product(product_id, quantity_sold):
-    # Get product details
     cursor.execute("SELECT price, quantity FROM products WHERE id = %s", (product_id,))
     product = cursor.fetchone()
     
@@ -42,5 +38,4 @@ def sell_product(product_id, quantity_sold):
     else:
         print("Not enough stock available!")
 
-# Example usage
 sell_product(1, 10)
